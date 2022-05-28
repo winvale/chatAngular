@@ -34,4 +34,10 @@ export class AuthService {
       return null;
     }
   }
+  getuserLogged(){
+    return this.afauth.authState;
+  }
+  logout(){
+    this.afauth.signOut();
+  }
 }

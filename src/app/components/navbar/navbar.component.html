@@ -1,8 +1,14 @@
 <nav class="navbar bg-light">
-    <div class="container-fluid">
+  
       <a class="navbar-brand" href="#">
         <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
         Chat-Pastos
       </a>
-    </div>
+   
+      <a class="navbar-brand" href="#" *ngIf="userLogged|async as user">
+        {{user.displayName || user.email}}
+        <img style="border-radius: 100%" *ngIf="user.photoURL" src="{{user.photoURL}}">
+        
+      </a>
+
   </nav>

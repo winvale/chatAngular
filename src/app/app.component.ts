@@ -19,8 +19,8 @@ export class AppComponent {
   Ingresar(){
     console.log(this.usuario)
     const {email,password}=this.usuario;
-    this.authService.registro(email,password).then(res=>{
-      console.log("se registro correctamente:",res)
+    this.authService.login(email,password).then(res=>{
+      console.log("Regitro Normal:",res)
     });
   }
 
@@ -28,8 +28,15 @@ export class AppComponent {
     console.log(this.usuario)
     const {email,password}=this.usuario;
     this.authService.loginWithGoogle(email,password).then(res=>{
-      console.log("se registro correctamente:",res)
+      console.log("registr:",res)
   });
 }
-
+  obtnerUsuLoge(){
+    this.authService.getuserLogged().subscribe(res=>{
+      console.log(res?.email)
+    });  
+  }
+  salir(){
+    this.authService.logout();
+  }
 }

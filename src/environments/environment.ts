@@ -5,14 +5,13 @@
 export const environment = {
   production: false,
     firebaseConfig: {
-    apiKey: "AIzaSyB8fTWqxiQ13_OU22LuzGUJ4l3_w4-rSDA",
-    authDomain: "chatintentas.firebaseapp.com",
-    databaseURL: "https://chatintentas-default-rtdb.firebaseio.com",
-    projectId: "chatintentas",
-    storageBucket: "chatintentas.appspot.com",
-    messagingSenderId: "734162119460",
-    appId: "1:734162119460:web:84c1abd4d0759684b8a1b1",
-    measurementId: "G-4FNJB65Z4S"
+      apiKey: "AIzaSyDBGhlJ7tMnYptUsXTXoxUF5yoJlOBwD4U",
+      authDomain: "chat-pro-4b4bf.firebaseapp.com",
+      projectId: "chat-pro-4b4bf",
+      storageBucket: "chat-pro-4b4bf.appspot.com",
+      messagingSenderId: "318304805781",
+      appId: "1:318304805781:web:9aef10c0f99ee1ffa88c9c",
+      measurementId: "G-9DXKY7D1DX"
   }
 };
 
