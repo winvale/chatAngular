@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chatAngular';
+
+  usuario={
+    email:'',
+    password: ''
+  }
+  Ingresar(){
+    console.log(this.usuario)
+  }
 }

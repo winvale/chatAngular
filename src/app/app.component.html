@@ -1,7 +1,20 @@
-<h1>Chat Linea firebase</h1>
-<<<<<<< HEAD
+<div class="container">
+    <div class="card text-center">
+    <div class="card-header">
+     <b>Login Chat</b>
+    </div>
+    <div class="card-body p-4">
+      <label style="float:left">Correo</label>
+      <input type="email"    placeholder="Ingrese correo" class="form-control m-2"  [(ngModel)]="usuario.email"> 
 
-<button>UwU</button>
-=======
-<h2>Holaaa</h2>
->>>>>>> d8900aea5aa82d5c7c08c3c852ddd0d90ca0a4f4
+      <label style="float:left">Contraseña</label>
+      <input type="password" placeholder="Ingrese contraseña" class="form-control m-2" [(ngModel)]="usuario.password">
+
+     
+      <div class="d-grid gap-1">
+        <button class="btn btn-primary m-2" (click)="Ingresar()">Ingresar</button>
+      </div>
+      <label>Aun no tienes cuenta? <a href="#">Registrate</a></label>
+    </div>
+  </div>
+</div>
