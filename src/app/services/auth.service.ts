@@ -7,8 +7,16 @@ import firebase from 'firebase/compat/app';
 export class AuthService {
 
   constructor(private afauth: AngularFireAuth) { 
-
   }
+  async registro(emai:string,password:string){
+    try{
+      return await this.afauth.createUserWithEmailAndPassword(emai,password);
+    }catch(err){
+      console.log("Error lg",err);
+      return null;
+    }
+  }
+
   async login(emai:string,password:string){
     try{
       return await this.afauth.signInWithEmailAndPassword(emai,password);
