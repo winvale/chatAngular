@@ -1,19 +1,25 @@
-<div class="card text-center cardContainer">
+<div class="card text-center cardContainer" *ngIf="usuarioLogeado">
     <div class="card-header ">
       Mensajes
     </div>
 
     <div class="card-body">
-
+        <div>
+            <p *ngFor="let mensaje of mensajes" class="recibido p-2"
+            [ngClass]="(usuarioLogeado.uid==mensajes.emisor)? 'enviado' : 'recibido' "
+            >
+            {{mensaje.texto}}
+            </p>
+        </div>
     </div>
 
     <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
        
         <input type="text" class="form-control" placeholder="Enviar mensaje" [(ngModel)]="nuevoMensaje"
          [ngModelOptions]="{standalone: true}">
-            <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" alt="send Mensajes">
+            <div class="input-group-append" (click)="enviarMensaje()">
+            <span class="input-group-text " id="basic-addon2">
+                <img class="imgEnviar" src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" alt="send message">
             </span>
         </div>
     </form>

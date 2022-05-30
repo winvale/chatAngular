@@ -21,3 +21,24 @@
 .card-footer{
     background-color: rgb(78, 76, 76);
 }
+.imgEnviar:active{
+    transform: scale(0.5);
+}
+.enviado{
+    display: block;
+    float: left;
+    background-color: green;
+    color: white;
+    min-width: 10px;
+    border-radius: 9px;
+    text-align: left;
+}
+.recibido{
+    display: block;
+    float: right;
+    background-color: rgb(6, 17, 82);
+    color: white;
+    min-width: 50.01px;
+    border-radius: 10px;
+    text-align: left;
+}
