@@ -11,13 +11,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { PageNoFoundComponent } from './components/page-no-found/page-no-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    PageNoFoundComponent
   ],
   imports: [
     BrowserModule,

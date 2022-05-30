@@ -1,13 +1,24 @@
 <nav class="navbar bg-light">
   
       <a class="navbar-brand" href="#">
-        <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="50" 
+        height="50" class="d-inline-block align-text-top">
         Chat-Pastos
       </a>
+
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="salir()">Salir</button>
+        </div>
+      </div>
    
-      <a class="navbar-brand" href="#" *ngIf="userLogged | async as user">
+      <a class="navbar-brand" href="#" *ngIf="userLogged | async as user else btnIngresar">
         {{user.displayName || user.email}}
         <img style="border-radius: 100%"  src="{{user.photoURL}}">
       </a>
 
+      <ng-template #btnIngresar>
+        <button class="btn btn-outline-primary" routerLink="/login">Ingresar</button>
+      </ng-template>
   </nav>

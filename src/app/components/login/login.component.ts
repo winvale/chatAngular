@@ -35,10 +35,6 @@ export class LoginComponent implements OnInit {
       console.log(res?.email)
     });  
   }
-  salir(){
-    this.authService.logout();
-  }
-
   ngOnInit(): void {
   }
 
