@@ -1,1 +1,20 @@
-<p>chat works!</p>
+<div class="card text-center cardContainer">
+    <div class="card-header ">
+      Mensajes
+    </div>
+
+    <div class="card-body">
+
+    </div>
+
+    <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
+       
+        <input type="text" class="form-control" placeholder="Enviar mensaje" [(ngModel)]="nuevoMensaje"
+         [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" alt="send Mensajes">
+            </span>
+        </div>
+    </form>
+</div>

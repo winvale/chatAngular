@@ -1,15 +1,15 @@
 <nav class="navbar bg-dark">
   
       <a class="navbar-brand" href="#">
-        <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="50" 
-        height="50" class="d-inline-block align-text-top">
-        Chat-Pastos
+        <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="60" 
+        height="60" class="d-inline-block align-text-top">
+        NariChat
       </a>
 
       <div ngbDropdown class="d-inline-block" *ngIf="userLogged | async as user else btnIngresar">
         <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
           <a class="navbar-brand" href="#">
-            {{user.displayName || user.email}}
+            {{user.displayName?user.displayName: user.email}}
             <img style="border-radius: 100%" width="15%" height="15%"  src="{{user.photoURL}}">
           </a>
         </button>
