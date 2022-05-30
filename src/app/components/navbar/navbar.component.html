@@ -5,10 +5,9 @@
         Chat-Pastos
       </a>
    
-      <a class="navbar-brand" href="#" *ngIf="userLogged|async as user">
+      <a class="navbar-brand" href="#" *ngIf="userLogged | async as user">
         {{user.displayName || user.email}}
-        <img style="border-radius: 100%" *ngIf="user.photoURL" src="{{user.photoURL}}">
-        
+        <img style="border-radius: 100%"  src="{{user.photoURL}}">
       </a>
 
   </nav>

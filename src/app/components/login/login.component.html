@@ -1,1 +1,24 @@
-<p>login works!</p>
+<body class="fondo">
+    <div class="container fondo">
+        <div class="card text-center">
+        <div class="card-header">
+        <b>Login Chat</b>
+        </div>
+        <div class="card-body p-4">
+        <label style="float:left">Correo</label>
+        <input type="email"    placeholder="Ingrese correo" class="form-control m-2"  [(ngModel)]="usuario.email"> 
+
+        <label style="float:left">Contraseña</label>
+        <input type="password" placeholder="Ingrese contraseña" class="form-control m-2" [(ngModel)]="usuario.password">
+
+        
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary m-2" (click)="Ingresar()">Ingresar</button>
+            <button class="btn btn-info m-2" (click)="IngresarGoogle()">Ingresar con Google</button>
+        </div>
+        <label>Aun no tienes cuenta? <a routerLink="/register">Registrarse</a></label>
+        </div>
+        <button class="btn btn-info btn-block m-2 " (click)="salir()" >salir</button>
+    </div>
+    </div>
+</body>
