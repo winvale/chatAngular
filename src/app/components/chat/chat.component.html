@@ -1,16 +1,16 @@
 <div class="card text-center cardContainer" *ngIf="usuarioLogeado">
-    <div class="card-header ">
+    <div class="card-header">
       Mensajes
     </div>
 
-    <div class="card-body">
-        <div>
-            <p *ngFor="let mensaje of mensajes" class="recibido p-2"
-            [ngClass]="(usuarioLogeado.uid==mensajes.emisor)? 'enviado' : 'recibido' "
-            >
+    <div class="card-body contendedordeMensajes h-100"  id="contendedordeMensajes" >
+        <div >
+            <p  *ngFor="let mensaje of mensajes" class="msj p-2" 
+            [ngClass]="(usuarioLogeado.uid == mensaje.emisor)? 'enviado' : 'recibido' ">
             {{mensaje.texto}}
             </p>
         </div>
+
     </div>
 
     <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
@@ -23,4 +23,5 @@
             </span>
         </div>
     </form>
+
 </div>

@@ -10,7 +10,7 @@
         <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
           <a class="navbar-brand" href="#">
             {{user.displayName?user.displayName: user.email}}
-            <img style="border-radius: 100%" width="15%" height="15%"  src="{{user.photoURL}}">
+            <img style="border-radius: 100%" width="15%" height="15%"  src="{{ user.photoURL}}">
           </a>
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">

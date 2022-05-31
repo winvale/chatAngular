@@ -12,7 +12,7 @@
     font-weight: 700; 
 }
 .card-body{
-    padding: 00.56rem;
+    padding: 0.5rem;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -26,19 +26,26 @@
 }
 .enviado{
     display: block;
-    float: left;
+    float: right;
     background-color: green;
     color: white;
-    min-width: 10px;
-    border-radius: 9px;
+    min-width: 50.01%;
+    border-radius: 10px;
     text-align: left;
 }
 .recibido{
     display: block;
-    float: right;
+    float: left;
     background-color: rgb(6, 17, 82);
     color: white;
-    min-width: 50.01px;
+    min-width: 50.01%;
     border-radius: 10px;
     text-align: left;
+}
+.contendedordeMensajes{
+    overflow: scroll;
+    padding: 0.3rem;
+}
+.contendedordeMensajes::-webkit-scrollbar{
+    display: none;
 }

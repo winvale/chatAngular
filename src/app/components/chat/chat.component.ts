@@ -11,20 +11,24 @@ export class ChatComponent implements OnInit {
   usuarioLogeado: any;
   mensajes:any=[
     {
-      emisor:"id",
-      texto:"Hola  AASsa "
+      emisor:"X1itQGEGKdYHVdOdQjbGaY7p8Rq1",
+      texto:"Hola  esto es una prueba "
     },
     {
       emisor:"id",
-      texto:"Hola adasdasd "
+      texto:"Hola la prueba esta bien "
+    },
+    {
+      emisor:"X1itQGEGKdYHVdOdQjbGaY7p8Rq1",
+      texto:"  ok"
     },
     {
       emisor:"id",
-      texto:"Hola  asdasd asdas "
+      texto:"edwin dev "
     },
     {
       emisor:"id",
-      texto:"Hola asdasdasd asdasdasd "
+      texto:"xd"
     },
   ];
     constructor(private authService:AuthService){
@@ -38,6 +42,26 @@ export class ChatComponent implements OnInit {
   }
   enviarMensaje(){
     console.log(this.nuevoMensaje);
+    let mensaje= 
+      {
+        emisor: this.usuarioLogeado.uid,
+        texto:this.nuevoMensaje
+      }
+    this.mensajes.push(mensaje);  
     this.nuevoMensaje="";
+    this.scrollToTheLastElementByClassName();
+
+    setTimeout(() => {
+      this.scrollToTheLastElementByClassName()
+    }, 10);
+}
+ 
+  scrollToTheLastElementByClassName(){
+    let elements = document.getElementsByClassName('msj');
+    let ultimo: any = elements[(elements.length-1)];
+    let toppos = ultimo.offsetTop;
+
+    //@ts-ignore
+    document.getElementById('contendedordeMensajes')?.scrollTop = toppos;
   }
 }
