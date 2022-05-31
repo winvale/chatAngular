@@ -1,6 +1,12 @@
-<div class="card text-center cardContainer" *ngIf="usuarioLogeado">
+<div *ngIf="usuarioLogeado && !mostrarChat " class="chatIconContainer" (click)="mostrarChat=true">
+    <img src="https://img.icons8.com/color/48/000000/chat--v1.png" alt="" class="ChatIcon">
+
+</div>
+
+<div class="card text-center cardContainer" *ngIf="usuarioLogeado && mostrarChat ">
     <div class="card-header">
       Mensajes
+      <div class="closeIcon" (click)="mostrarChat=false">X</div>
     </div>
 
     <div class="card-body contendedordeMensajes h-100"  id="contendedordeMensajes" >

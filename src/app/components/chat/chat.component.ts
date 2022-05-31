@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
+  mostrarChat =true;
   nuevoMensaje:string="";
   usuarioLogeado: any;
   mensajes:any=[
@@ -41,6 +42,7 @@ export class ChatComponent implements OnInit {
         );
   }
   enviarMensaje(){
+    if(this.nuevoMensaje=="")return;
     console.log(this.nuevoMensaje);
     let mensaje= 
       {
