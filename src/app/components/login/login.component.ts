@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
     console.log(this.usuario)
     const {email,password}=this.usuario;
     this.authService.login(email,password).then(res=>{
-      console.log("Regitro Normal:",res)
+    console.log("Regitro Normal:",res)
+    
+    
     });
   }
 
@@ -38,4 +40,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
+
