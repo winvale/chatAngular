@@ -8,7 +8,7 @@
 
       <div ngbDropdown class="d-inline-block" *ngIf="userLogged | async as user else btnIngresar">
         <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-          <a class="navbar-brand" href="#">
+          <a style="color: white;" class=" navbar-brand" href="#">
             {{user.displayName? user.displayName: user.email}}
           </a>
               <img *ngIf="user.photoURL? user.photoURL:false " 
