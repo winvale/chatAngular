@@ -9,10 +9,13 @@
       <div ngbDropdown class="d-inline-block" *ngIf="userLogged | async as user else btnIngresar">
         <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
           <a class="navbar-brand" href="#">
-            {{user.displayName?user.displayName: user.email}}
-            <img style="border-radius: 100%" width="15%" height="15%"  src="{{ user.photoURL}}">
+            {{user.displayName? user.displayName: user.email}}
           </a>
+              <img *ngIf="user.photoURL? user.photoURL:false " 
+              style="border-radius: 100%" width="15%" height="15%"  
+              src="{{ user.photoURL}}">
         </button>
+
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button ngbDropdownItem (click)="salir()">Salir</button>
         </div>
