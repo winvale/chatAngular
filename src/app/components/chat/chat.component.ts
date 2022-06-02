@@ -25,7 +25,7 @@ export class ChatComponent implements OnInit {
     },
     {
       emisor:"id",
-      texto:"edwin dev "
+      texto:"edwin gei "
     },
     {
       emisor:"id",
