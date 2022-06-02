@@ -40,9 +40,9 @@ export class AuthService {
   logout(){
     this.afauth.signOut();
   }
-  async delete_user(email:string,password:string){
+  delete_user(email:string,password:string){
     try{
-      return "Eliminado :3";
+      return "Usuario"+email+" eliminado :3";
     }catch(err){
       console.log("Error lg",err);
       return null;
