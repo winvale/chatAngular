@@ -15,4 +15,7 @@ export class NavbarComponent implements OnInit {
   salir(){
     this.authService.logout();
   }
+  eliminar(){
+    this.authService.delete_user;
+  }
 }
