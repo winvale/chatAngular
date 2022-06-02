@@ -1,0 +1,27 @@
+<nav class="navbar bg-dark">
+  
+      <a class="navbar-brand" href="#">
+        <img src="https://img.icons8.com/clouds/100/000000/chat.png" alt="" width="60" 
+        height="60" class="d-inline-block align-text-top">
+        NariChat
+      </a>
+
+      <div ngbDropdown class="d-inline-block" *ngIf="userLogged | async as user else btnIngresar">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          <a style="color: white;" class=" navbar-brand" href="#">
+            {{user.displayName? user.displayName: user.email}}
+          </a>
+              <img *ngIf="user.photoURL? user.photoURL:false " 
+              style="border-radius: 100%" width="15%" height="15%"  
+              src="{{ user.photoURL}}">
+        </button>
+
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="salir()">Salir</button>
+        </div>
+      </div>
+
+      <ng-template #btnIngresar>
+        <button class="btn btn-outline-primary" routerLink="/login">Ingresar</button>
+      </ng-template>
+  </nav>

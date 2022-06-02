@@ -1,0 +1,76 @@
+.cardContainer{
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    right: 0.56rem;
+    bottom: 0.56rem;
+    margin-right: 2%;
+}
+.card-header{
+    background-color: rgb(78, 76, 76);
+    color: wheat;
+    font-weight: 700; 
+}
+.card-body{
+    padding: 0.5rem;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.card-footer{
+    background-color: rgb(78, 76, 76);
+}
+.imgEnviar:active{
+    transform: scale(0.5);
+}
+.enviado{
+    display: block;
+    float: right;
+    background-color: green;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+}
+.recibido{
+    display: block;
+    float: left;
+    background-color: rgb(6, 17, 82);
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+}
+.contendedordeMensajes{
+    overflow: scroll;
+    padding: 0.3rem;
+}
+.contendedordeMensajes::-webkit-scrollbar{
+    display: none;
+}
+.chatIconContainer{
+    position: fixed;
+    right: 00.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #8b8c8d;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 2px #636464;
+    margin-right: 3%;
+}
+.chatIcon{
+    width: 40px;
+    height: 40px;
+}
+.closeIcon{
+    position: absolute;
+    right: 0.8rem;
+    top:  0.5rem;
+    cursor: pointer;
+}
