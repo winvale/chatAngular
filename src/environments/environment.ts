@@ -4,14 +4,13 @@
 
 export const environment = {
   production: false,
-    firebaseConfig: {
-      apiKey: "AIzaSyDBGhlJ7tMnYptUsXTXoxUF5yoJlOBwD4U",
-      authDomain: "chat-pro-4b4bf.firebaseapp.com",
-      projectId: "chat-pro-4b4bf",
-      storageBucket: "chat-pro-4b4bf.appspot.com",
-      messagingSenderId: "318304805781",
-      appId: "1:318304805781:web:9aef10c0f99ee1ffa88c9c",
-      measurementId: "G-9DXKY7D1DX"
+  firebaseConfig : {
+        apiKey: "AIzaSyAXcTfDexGZI1ZRhh5CPQAan2JK9HFmoUM",
+        authDomain: "chatangular-7c950.firebaseapp.com",
+        projectId: "chatangular-7c950",
+        storageBucket: "chatangular-7c950.appspot.com",
+        messagingSenderId: "1046233222966",
+        appId: "1:1046233222966:web:8405f42ca60471edad2d97"
   }
 };
 
