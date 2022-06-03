@@ -13,6 +13,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNoFoundComponent } from './components/page-no-found/page-no-found.component';
 import { ChatComponent } from './components/chat/chat.component';
+//import {AngularFirestore} from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { ChatComponent } from './components/chat/chat.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [],
+  providers: [/*AngularFirestore*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
